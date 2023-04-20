@@ -4,7 +4,7 @@ const baseUrl = 'https://ecommercebackend.fundamentos-29.repl.co/'
 const carToggle = document.querySelector('.car__toggle');
 const carBlock = document.querySelector('.car__block');
 //* Show product on the web
-const productsList = document.querySelector('#product-container')
+const productsList = document.querySelector('#product-container');
 //* shopping cart
 const cart = document.querySelector('#car');
 const cartList = document.querySelector('#car__list');
@@ -12,6 +12,10 @@ const cartList = document.querySelector('#car__list');
 emptyCarButtton = document.querySelector('#empty__cart') 
 //? We need an array that receives the elements we should introduce into the shopping cart
 let cartProducts =[];
+//* Modal
+const modalContainer = document.querySelector('#modal-container');
+const modalElement = document.querySelector('#modal');
+let modalDetails = [];
 //* Logic to hide cart
 carToggle.addEventListener('click', () => {
   carBlock.classList.toggle('nav__car__visible')
@@ -29,6 +33,10 @@ function eventListenersLoader() {
     cartProducts = JSON.parse(localStorage.getItem('cart')) || [];
     cartElementsHTML();
   })
+  //* When we press the boton 'view details'
+  productsList.addEventListener('click', modalProduct);
+  //* When we click on the X
+  modalContainer.addEventListener('click', closeModal);
 }
 function getProduct() {
   axios.get(baseUrl)
@@ -155,7 +163,29 @@ function emptyCart() {
   cartElementsHTML();
 }
 // Modal window
-
+function modalProduct(event) {
+  if(event.target.classList.contains('product__details')){
+    modalContainer.classList.add('show__modal')
+    const product = event.target.parentElement.parentElement
+    modalDetailsElement(product)
+  }
+}
+function closeModal(event) {
+  if(event.target.classList.contains('icon__modal')){
+    modalContainer.classList.remove('show__modal')
+    modalDetailsElement.innerHTML = '';
+    modalDetails = []
+  }
+}
+function modalDetailsElement(product) {
+  const infoDetails = [{
+    id: product.querySelector('button').getAttribute('data-id'),
+    image: product.querySelector('img').src,
+    name: product.querySelector('.product__container__name p').textContent,
+    price: product.querySelector('.product__container__price p').textContent,
+  }]
+  modalDetails = [...infoDetails]  
+}
 
 // Guardar informacion en local storage
 // localStorage.setItem('apellido', 'Freire')
