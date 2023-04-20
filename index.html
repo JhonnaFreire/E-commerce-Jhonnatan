@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favi.png" type="image/png">
+    <title>E-commerce Jhonnatan</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <nav>
+      <img src="./images/logo_nombre.png" alt="logo-nombre">
+      <button class="car__toggle">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <!-- Panel carrito de compras -->
+      <div class="car__block" id="car">
+        <div id="car__list">
+        </div>
+        <button class="empty__button" id="empty__cart">Empty Cart</button>
+      </div>
+    </nav>
+    <header>
+      <img src="./images/logo_blanco.png" alt="logo_header">
+    </header>
+    <main>
+      <h3>
+        All products
+        <!-- Lista de productos -->
+        <div id="product-container" class="principal-continaer">
+        </div>
+      </h3>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/4484cd9e83.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <footer>footer</footer>
+  </body>
+</html>
