@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 nav {
   display: flex;
@@ -37,7 +37,7 @@ nav button i:hover {
 }
 header {
   height: 350px;
-  background-color: #EB4A5A;
+  background-color: #eb4a5a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@ header img {
   margin-right: 40px;
   background-color: rgba(255, 255, 255, 0.733);
   position: fixed;
-  top: 50px;
+  top: 65px;
   height: 85%;
   top: 65px;
   width: 40%;
@@ -79,7 +79,7 @@ main h3 {
 }
 .product__container {
   max-width: 300px;
-  height: 100%; 
+  height: 100%;
   transition: all 0.25s;
 }
 .product__container:hover {
@@ -111,10 +111,10 @@ main h3 {
   padding-left: 20px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .car__button {
-  background-color: #EB4A5A;
+  background-color: #eb4a5a;
   padding: 8px;
   color: white;
   width: 100px;
@@ -132,6 +132,7 @@ main h3 {
   border: solid 1px white;
   cursor: pointer;
   transition: 0.5s;
+  margin-right: 20px;
 }
 .product__details:hover {
   transform: translateY(-3px);
@@ -153,7 +154,7 @@ main h3 {
   padding: 6px 9px;
   margin: 15px 0px;
   border-radius: 20px;
-  background-color: #EB4A5A;
+  background-color: #eb4a5a;
   cursor: pointer;
   color: white;
 }
@@ -179,12 +180,12 @@ main h3 {
 .car__product__description p:nth-child(3) {
   margin: 10px 20px;
   font-weight: 300;
-} 
+}
 .car__product__description p:nth-child(4) {
   margin: 10px 20px;
   font-weight: 300;
-} 
-.car__block .empty__button{
+}
+.car__block .empty__button {
   width: 150px;
   background-color: #274671;
   color: white;
@@ -200,15 +201,17 @@ main h3 {
   transform: translateY(-3px);
 }
 .modal__container__element {
-  background-color: white;
-  min-width: 85%;
-  min-height: 60%;
+  background-color: rgba(248, 233, 233, 0.945);
+  width: 85%;
+  max-width: 1000px;
+  min-height: 65%;
   position: fixed;
-  top: 20%;
-  left: 8%;
-  box-shadow: 0px 10px 20px 8px #434343;
+  top: 13%;
+  left: 20%;
+  box-shadow: 0px 10px 20px 8px #43434385;
+  display: none;
 }
-.modal__container__element div:first-child {
+.modal__container__element .close {
   display: flex;
   justify-content: flex-end;
   color: #434343;
@@ -222,8 +225,224 @@ main h3 {
 .modal__container__element div i:hover {
   transform: rotate(90deg);
 }
+.show__modal {
+  display: block;
+}
+.principal__element {
+  display: flex;
+  justify-content: space-around;
+}
+.first__modal__text p:first-child {
+  font-size: 26px;
+  color: #434343;
+  margin-bottom: 20px;
+}
+.first__modal__text p:last-child {
+  font-size: 28px;
+  color: #434343;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.first__modal__colors p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.first__modal__colors div {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.first__modal__colors div:hover {
+  border: solid 1px #274671;
+}
+.first__modal__sizes__text div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.first__modal__sizes__text div p:first-child {
+  font-size: 18px;
+}
+.first__modal__sizes__text div p:last-child {
+  font-size: 14px;
+  color: #434343;
+}
+.first__modal__colors div img {
+  width: 100px;
+}
+.first__modal__sizes {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.first__modal__sizes div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 40px;
+}
+.first__modal__sizes div:hover {
+  border: solid 1px #274671;
+  transform: scale(1.1);
+}
+.second__modal__section {
+  position: relative;
+  z-index: 1;
+}
+.first__modal__sizes div p {
+  font-size: 18px;
+  color: #434343;
+}
+.second__modal__section img {
+  width: 350px;
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+.second__modal__section div {
+  background-color: #eb4a5a;
+  width: 200px;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+}
+@media screen and (max-width: 1550px) {
+  .modal__container__element {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .modal__container__element {
+    left: 9%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .first__modal__sizes__text {
+    max-width: 300px;
+  }
+  .first__modal__sizes {
+    max-width: 300px;
+    gap: 20px;
+  }
+  .first__modal__sizes div {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 768px) {
   .car__block {
-    
+    width: 70%;
   }
+  .nav__car__visible {
+    left: 30%;
+  }
+  .first__modal__sizes__text {
+    max-width: 100%;
+  }
+  .first__modal__sizes {
+    max-width: 100%;
+  }
+  .principal__element {
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .modal__container__element {
+    top: 10%;
+  }
+  .first__modal__text p:first-child {
+    margin-bottom: 10px;
+  }
+  .first__modal__text p:last-child {
+    margin-bottom: 10px;
+  }
+  .first__modal__colors div {
+    margin-bottom: 10px;
+  }
+  .first__modal__sizes__text div {
+    margin-bottom: 10px;
+  }
+  .second__modal__section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  .second__modal__section div {
+    height: 320px;
+  }
+  .second__modal__section img {
+    top: 0%;
+    width: 320px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .first__modal__text p:first-child {
+    font-size: 22px;
+  }
+  .first__modal__text p:last-child {
+    font-size: 24px;
+  }
+  .modal__container__element {
+    top: 7.9%;
+  }
+}
+.web-footer {
+  width: 100%;
+  background-color: #eb4a5a;
+}
+.web-footer .group-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0;
+}
+.web-footer .group-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.web-footer .group-1 .box figure img {
+  width: 150px;
+}
+.web-footer .group-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.web-footer .group-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.web-footer .group-1 .social-network a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: salmon;
+  border-radius: 25px;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.web-footer .group-1 .social-network a:hover {
+  color: #eb4a5a;
+}
+.web-footer .group-2 {
+  background-color: #fff;
+  padding: 15px 10px;
+  text-align: center;
+  color: #434343;
 }

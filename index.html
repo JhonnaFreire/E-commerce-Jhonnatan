@@ -4,47 +4,74 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="./img/favi.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" href="./img/favi.png" type="image/png" />
     <title>E-commerce Jhonnatan</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <nav>
-      <img src="./images/logo_nombre.png" alt="logo-nombre">
+      <img src="./images/logo_nombre.png" alt="logo-nombre" />
       <button class="car__toggle">
         <i class="fa-solid fa-cart-shopping"></i>
       </button>
-      <!-- Panel carrito de compras -->
+      <!-- Shopping cart panel -->
       <div class="car__block" id="car">
-        <div id="car__list">
-        </div>
+        <div id="car__list"></div>
         <button class="empty__button" id="empty__cart">Empty Cart</button>
       </div>
     </nav>
     <header>
-      <img src="./images/logo_blanco.png" alt="logo_header">
+      <img src="./images/logo_blanco.png" alt="logo_header" />
     </header>
     <main>
       <h3>All products</h3>
-        <!-- Lista de productos -->
-        <div id="product-container" class="principal-continaer">
-        </div>
-        <!-- modal -->
+      <!-- prodcut list -->
+      <div id="product-container" class="principal-continaer"></div>
+      <!-- modal -->
       <div id="modal-container" class="modal__container__element">
         <div>
           <i class="fa-solid fa-x icon__modal"></i>
         </div>
-        <div id="modal" class="modal__element">
-          
-        </div>
+        <div id="modal" class="modal__element"></div>
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/4484cd9e83.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4484cd9e83.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./main.js"></script>
-    <footer>footer</footer>
+    <footer class="web-footer">
+      <div class="group-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="./img/logo blanco.png" alt="logo-1">
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>Estudia primero paga despues!</p>
+        </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="social-network">
+            <a href="https://www.facebook.com/academlo/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/academlohq/?hl=es" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.youtube.com/c/academlo" class="fa fa-youtube" target="_blank"></a>
+            <a href="https://twitter.com/AcademloHQ" class="fa fa-twitter" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="group-2">
+        <small>&copy; 2023 <b>Academlo</b> -Todos los derechos reservados.</small>
+      </div>
+    </footer>
   </body>
 </html>
